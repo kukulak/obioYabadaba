@@ -1,0 +1,26 @@
+<div class="espacio">
+  
+</div>
+<div class="tarjeta" style="width: 18rem;">
+      {% if instance.image %}
+    <a href="{{ instance.get_absolute_url }}">
+      <img class="tarjetaImage" src="{{ instance.image.url }}" alt="{{ instance.title }} logo">
+    </a>
+      {% endif %}
+      <div class="infoProducto">
+        <h5 class="producto-titulo">{{ instance.title }}</h5>
+        <div class="card-descripcion">
+          
+          {{ instance.smallDescription|linebreaks|truncatewords:14 }}
+          <p class="pres">
+            <!-- {{ instance.presentaciones|length}} -->
+            3 presentaciones
+          </p>
+          <a href="{{ instance.get_absolute_url }}" class="btnTarjeta">Ver</a>
+                {% include 'products/snippets/update-cart.html' with product=instance cart=cart %}
+          <!-- <a href="{% url 'products:detail' slug=instance.slug %}" class="btn btn-warning btnTarjeta">Comprar</a> -->
+
+        </div>
+
+      </div>
+  </div>

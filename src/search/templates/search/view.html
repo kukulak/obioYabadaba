@@ -1,0 +1,59 @@
+
+{% block content %}
+{% load static %}
+
+<div class="contenedorReco">
+
+  {% if query %}
+  <div class="formRecomendacion">
+    <div class="resultadoReco">
+      Te recomendamos <b> {{ query }} </b>
+      <hr/>
+    </div>
+    {% else %}
+    <div class="busquedaReco">
+      <p class="pregunta">
+        ¿Que tipo de producto te interesa?
+      </p>
+      {% include 'search/snippets/search-form.html' %}
+    </div>
+    
+  </div>
+
+    <div class="resImage">
+      <img class="shadowProduct" src = "{% static 'img/sombraRecomendaciones.png' %}" class="img-fluid" />
+      <img class="producto" src = "{% static 'img/producto-majomut.png' %}" class="img-fluid" />
+    </div>
+      
+    {% endif %}
+    
+          
+</div>
+
+    <div class="row">
+
+    {% for obj in object_list %}
+      <div class="col">
+
+      {% include 'products/snippets/card.html' with instance=obj %}
+
+
+      {% if forloop.counter|divisibleby:3 %}
+            <div class="row">
+              <div class="col-12">
+                <hr/>
+              </div>
+          {% elif forloop.counter|divisibleby:2 %}
+            </div>
+          <div class="row">
+            <div class="col-12"><hr/></div>
+          {% else %}
+            </div>
+            {% endif %}
+            {% cycle '<h1>SALE</h1>'  ''  %}
+          </div>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}

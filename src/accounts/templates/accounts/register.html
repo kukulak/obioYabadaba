@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="registerFormContenedor">
+
+  <h1 class="display-4 register">Register</h1>
+  <form  class="registerForm" method='POST'> {% csrf_token %}
+    {{ form }}
+    <button type='submit' class='btn btn-outline-dark'>Submit</button>
+  </form>
+
+</div>
+
+{% endblock %}

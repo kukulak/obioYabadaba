@@ -1,0 +1,97 @@
+{% url 'home' as home_url %}
+{% url 'contact' as contact_url %}
+{% url 'products:list' as product_list_url %}
+{% url 'about' as about_url %}
+{% url 'cultura' as cultura_url %}
+{% url 'comunidad' as comunidad_url %}
+{% url 'login' as login_url %}
+{% url 'logout' as logout_url %}
+{% url 'register' as register_url %}
+{% url 'cart:home' as cart_url %}
+
+
+{% load static %}
+
+<nav class="navbar navbar-expand-lg mb-3 navegacion">
+
+
+  <!-- LOGO -->
+  <div class="logoContainer">
+  <a class="navbar-brand" href="{{ home_url }}">
+    <!-- <img  class="d-inline-block align-top logo"src="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg"   alt=""> -->
+
+     <img src = "{% static 'img/obioLogo.png' %}" class="img-fluid logo" />
+   
+    <!-- {% if brand_name %} {{brand_name}} {% else %}OBIO {% endif %} -->
+
+  </a>
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</div>
+
+
+<!-- MENU -->
+
+<div class="menuContainer">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item {%if request.path == home_url %}active{% endif %}">
+        <a class="" href="{{ home_url }}">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item {%if request.path == product_list_url %}active{% endif %}">
+        <a class="" href="{{ product_list_url }}">Tienda</a>
+      </li>
+      
+      <li class="nav-item {%if request.path == about_url %}active{% endif %}">
+        <a class="" href="{{ about_url }}">Obio</a>
+      </li>
+      
+      <li class="nav-item {%if request.path == about_url %}active{% endif %}">
+        <a class="" href="{{ cultura_url }}">Cultura</a>
+      </li>
+
+      <li class="nav-item {%if request.path == about_url %}active{% endif %}">
+        <a class="" href="{{ comunidad_url }}">Comunidad</a>
+      </li>
+
+
+      <li class="nav-item {%if request.path == contact_url %}active{% endif %}">
+        <a class="" href="{{ contact_url }}">Contacto</a>
+      </li>
+      
+      {% if request.user.is_authenticated %}
+        <a class="" href="{{ logout_url }}">Salir</a>
+        <!-- <div class="dropdown-divider"></div> -->
+      {% else %}
+        <a class="" href="{{ login_url }}">Entrar</a>
+        <a class="" href="{{ register_url }}">Registrarse</a>
+        <!-- <div class="dropdown-divider"></div> -->
+      {% endif %}
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a> -->
+
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ product_list_url }}">Magic X Playing Cards</a>
+        </div>   -->
+      <!-- </li> -->
+
+
+
+      <li class="nav-item {%if request.path == cart_url %}active{% endif %}">
+        <a class="nav-link" href="{{ cart_url }}">
+          <!-- <i class="fab fa-shopping-cart" aria-hidden="true"></i>  -->
+          <span class="navbar-cart-count">{{ request.session.cart_items }}</span></a>
+      </li>
+    </ul>
+    <!-- {% include 'search/snippets/search-form.html' %} -->
+  </div>
+</div>
+</nav>

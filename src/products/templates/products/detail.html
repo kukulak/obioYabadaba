@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <div class="containerDetalle">
+    <div class="detalleProductos">
+      {% if object.image %}
+      <img src="{{ object.image.url }}" class="img-fluid imgDetalle" alt="Trick_img">
+      {% endif %}
+      <div class="detalleInfo">
+
+        <h1 class="tituloDetalle">{{ object.title }}</h1>
+       <p class="subCategoriaDetalle">
+        {{ object.subcategoria }}
+       </p> 
+       <ul>
+        <li> {{ object.caracteristicas|linebreaks}}</li>
+       <li>{{ object.caracteristicas|linebreaks}}</li>
+       <li>{{ object.caracteristicas|linebreaks}}</li>
+       <li>{{ object.caracteristicas|linebreaks}}</li>
+       </ul>
+        <!-- <h3>{{ "Some Title Here"|title }}</h3> -->
+       <p style="margin: 0;">
+          Contenido:
+        </p>
+        <div class="contenidoDetalle">
+          {{ object.presentaciones|linebreaks}}
+        </div>
+        
+        <div class="col-12 col-md-6">
+          {% include 'products/snippets/update-cart.html' with product=object cart=cart %}
+    
+        </div>
+
+        
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  
+  <div class="infoDetalle detA">
+    
+            {{ object.smallDescription|linebreaks}}<br/>
+      
+
+  </div>
+
+  <div class="infoDetalle detB">
+    
+
+    {{ object.description|linebreaks}}<br/>
+
+</div>
+{% endblock %}

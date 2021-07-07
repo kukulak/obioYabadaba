@@ -1,0 +1,73 @@
+
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "Ph-Ye Playing Cards",
+        "slug": "abc",
+        "description": "These are best playing cards for cardistry and magic",
+        "price": "20.00",
+        "image": "products/1239399250/1239399250.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2018-10-23T20:46:44.846Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Magic trick",
+        "slug": "trick",
+        "description": "This is A magic trick",
+        "price": "20.00",
+        "image": "products/2196020821/2196020821.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2018-10-23T20:46:44.846Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "gaming Computer",
+        "slug": "gaming",
+        "description": "yeaaah",
+        "price": "20.00",
+        "image": "",
+        "featured": true,
+        "active": true,
+        "timestamp": "2018-10-23T20:46:44.846Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "title": "Another Product",
+        "slug": "another-product",
+        "description": "this is another product.\r\nloremLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+        "price": "20.00",
+        "image": "products/3415181356/3415181356.jpg",
+        "featured": false,
+        "active": true,
+        "timestamp": "2018-10-23T20:46:44.846Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "title": "product 1",
+        "slug": "cdn",
+        "description": "dono",
+        "price": "20.00",
+        "image": "products/714947267/714947267.jpg",
+        "featured": true,
+        "active": true,
+        "timestamp": "2018-10-25T07:21:01.544Z"
+    }
+}
+]

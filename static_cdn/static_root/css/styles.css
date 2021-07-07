@@ -1,0 +1,416 @@
+
+body{
+    background-color: #998776;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/fondo.png);
+    background-position-x: -400px;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+
+
+/* navegacion */
+
+
+.navegacion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto 20px;
+
+}
+
+.logoContainer{
+    display: grid;
+    align-self:flex-end;
+}
+
+.logo{
+    position: absolute;
+    width: 220px;
+    z-index: 2;
+}
+
+
+.menuContainer{
+    display: grid;
+    justify-content: end;
+}
+
+.menuContainer a{
+    color: #282828;
+    padding: 0 1.7rem;
+}
+
+.secundaryMenu{
+    background-color: #A19285;
+    display: flex;
+    flex-direction: row-reverse;
+
+  }   
+
+  
+ .secundaryMenu a{
+    text-decoration: none;
+    color: #323E48;
+    font-size: 12px;
+}
+  
+.home{
+    width: 90%;
+}
+
+.homeGrid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+    height: 70vh;
+    margin-top: 70px;
+}
+
+.homeDirectos{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0 60px 0 #423a33;
+
+}
+
+
+.directo{
+    justify-self: center;
+    height: 50%;
+   
+    display: grid;
+    align-items: center;
+    font-size: 35px;
+    color: aliceblue;
+    line-height: 1;
+    padding: 0 10px;
+    font-weight: 200;
+}
+
+.directoBtnA{
+    
+    background-color: #757B63;
+  cursor: pointer;
+    color: aliceblue;
+ 
+  
+}
+
+.directoBtnB{
+
+    cursor: pointer;
+
+    background-color: #B9BD8F;
+ 
+
+    color: #323E48;
+}
+
+
+
+.espacio{
+    height: 100px;
+}
+
+.homeRecomendaciones{
+    background: #757b63;
+    height: 60%;
+    align-self: end;
+    display: grid;
+    padding-top: 20px;
+    padding-right: 20px;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 60px 0 #423a33;
+}
+
+
+.homePromociones{
+    margin-top: -243px;
+    background: #757b63;
+    height: 60%;
+    align-self: end;
+    display: grid;
+    /* padding-top: 20px; */
+    /* padding-right: 20px; */
+    grid-template-columns: 1fr;
+    box-shadow: 0 0 60px 0 #423a33;
+
+}
+
+.homePromociones img{
+    width: 101.9%;
+}
+
+
+.homeEmail{
+    margin-top: 143px;
+    background: #757b63;
+    height: 60%;
+    align-self: end;
+    display: grid;
+    /* padding-top: 20px; */
+    /* padding-right: 20px; */
+    grid-template-columns: 1fr;
+    box-shadow: 0 0 60px 0 #423a33;
+
+}
+
+.homeEmail img{
+    width: 101.9%;
+}
+
+
+.recoForm{
+    width: 96%;
+    align-self: start;
+    justify-self: end;
+}
+
+.contenedorReco{
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+}
+
+.shadowProduct{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    max-width: 80%;
+    margin: 20px 30px;
+}
+
+.resImage img{
+    align-self: end;
+    
+}
+
+.producto{
+    position: absolute;
+    max-width: 206px;
+    margin-top: -379px;
+    margin-left: 71px;
+}
+
+.formRecomendacion{
+    width: 50%;
+    justify-self: end;
+}
+
+.resultadoReco{
+
+}
+
+.pregunta{
+    text-align: right;
+    font-weight: 200;
+    font-size: 20px;
+    color: white;
+}
+
+.busquedaReco{
+    display: grid;
+}
+
+
+.resImage{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: grid;
+}
+
+
+.tarjeta{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #757B63;
+    background-clip: border-box;
+    margin-top: 150px;
+    box-shadow: 0 0 80px 0 #5d5145;
+    
+    
+   
+}
+
+.tarjeta a{
+    display: grid;
+}
+
+.tarjetaImage{
+    width: 76%;
+    margin-top: -150px;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    align-self: center;
+    justify-self: center;
+    filter: drop-shadow(0px 4px 16px #00000072);
+}
+
+
+
+.infoProducto{
+  
+    /* display: flex; */
+    background-color: #757B63;
+}
+
+.producto-titulo{
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.card-descripcion{
+    text-align: center;
+    padding: 18px;
+    background-color: #636569;
+    color: antiquewhite;
+    font-weight: 200;
+    
+}
+
+.card-descripcion a{
+    margin-top: 10px;
+    margin-bottom: -35px;
+}
+
+.card-descripcion form{
+    position: absolute;
+    bottom: -66px;
+}
+
+.btnTarjeta{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: white;
+    background-color: #323E48;
+    width: 252px;
+    box-shadow: 0 0 40px 0 #0000008c;
+    transition: 1s;
+}
+
+.btnTarjeta:hover{
+    background-color: #191f24;
+    border: solid 1px #323E48;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0 60px 0 #000000a6;
+
+}
+
+
+.pres{
+    font-size: 14px;
+    /* color: #757b63; */
+}
+
+.containerDetalle{
+    color: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.imgDetalle{
+    width: 100%;
+    padding: 50px;
+}
+
+
+.detalleProductos{
+    width: 80%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.tituloDetalle{
+    font-weight: 200;
+}
+
+.subCategoriaDetalle{
+    font-weight: 200;
+    font-size: 20px;
+
+}
+
+.contenidoDetalle{
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.infoDetalle{
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.detA{
+    background-color: #424B53;
+}
+
+.detB{
+    background-color: #636569;
+}
+
+
+.footerContenedor{
+    overflow: hidden;
+    margin-top: 150px;
+
+
+}
+
+.footerContenedor img{
+    width: 100%;
+}
+
+
+.logIn{
+    margin-top: 180px;
+}
+
+.register{
+    margin-top: 180px;
+
+}
+
+
+.registerForm{
+    display: grid;
+    max-width: 150px;
+    gap: 6px;
+}
+
+.registerFormContenedor{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
